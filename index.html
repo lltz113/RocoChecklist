@@ -62,35 +62,43 @@
 
   /* 侧边导航栏样式 */
 
+  .sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 2px solid #f1f1f1;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
   .sidebar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 16px 0px 0px;
-  width: 16%;
-  height: 100%;
-  background-color: #ffffff;
-  border-right: 2px solid #f1f1f1;
-  position: fixed;
-  overflow: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-
+  
   .sidebar li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+    display: block;
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
   }
-
+  
   .sidebar li a.active {
     background-color: #555;
     color: white;
   }
-
-  .sidebar li a:hover {
-  background-color: #f1f1f1;
-  color: black;
+  
+  .sidebar li a:hover:not(.active) {
+    background-color: #f1f1f1;
+    color: black;
   }
-
+  
   @media screen and (max-width: 600px) {
   .sidebar ul {
     width: 100%;
@@ -138,9 +146,9 @@
 
 </div>
 
-<div class="markdown-preview" style="padding-left: 25%; padding-right: 20%;">
+<div class="markdown-preview" style="padding-left: 25%; padding-right: 15%;">
 
-  <h1 id="洛克王国常驻宠物万象集清单" style="text-align: center;">📋 洛克王国常驻宠物万象集清单 </h1>
+  <h1 id="洛克王国常驻宠物万象集清单" class="nav-heading" style="text-align: center;">📋 洛克王国常驻宠物万象集清单 </h1>
   <p>
     对清单项勾选或者取消勾选，页面会自动统计并保存你的收集进度和<em>洛克钻</em>奖励。<br>
     对于非自动统计的部分，你依然可以自主勾选，网站同样会保存其进度，但该部分不会贡献收集进度和奖励额度。<br><br>
@@ -154,7 +162,7 @@
 
   <hr>
 
-  <h2 id="勇者神祇">勇者神祇</h2>
+  <h2 id="勇者神祇" class="nav-heading">勇者神祇</h2>
   
   <div class="todo-group" id="group-15">
     
@@ -312,7 +320,7 @@
 
   <hr>
   
-  <h2 id="十二星宫">十二星宫 </h2>
+  <h2 id="十二星宫" class="nav-heading">十二星宫 </h2>
 
   <p>活动场景：天界各场景。<br>将鼠标指针悬停在清单项，可以查看宠物对应活动场景（及其地图编号）。<br>注意：部分活动进度每周五刷新。</p>
 
@@ -402,7 +410,7 @@
 
   <hr>
     
-  <h2 id="四时邀约">四时邀约</h2>
+  <h2 id="四时邀约" class="nav-heading">四时邀约</h2>
 
   <p>活动场景：皇家研究院→占星台→甘道夫<br>地图编号：11</p>
   <p>消耗<em>邀请函</em>可以兑换宠物。将鼠标指针悬停在清单项，可以查看该宠物对应<em>邀请函</em>花费。</p>
@@ -566,7 +574,7 @@
 
   <div class="todo-group" id="group-3">
 
-    <h2 id="魔法先锋队">魔法先锋队 </h2>
+    <h2 id="魔法先锋队" class="nav-heading">魔法先锋队 </h2>
     
     <p>活动场景：VIP广场→光明神殿，光明圣殿<br>地图编号：189，210</p>
     <p>参与活动需要达成VIP条件。</p>
@@ -622,7 +630,7 @@
   
   <div class="todo-group" id="group-20">
     
-    <h2 id="觉醒重生">觉醒重生</h2>
+    <h2 id="觉醒重生" class="nav-heading">觉醒重生</h2>
     
     <p>将鼠标指针悬停在清单项，可以查看宠物对应活动场景（及其地图编号）。</p>
 
@@ -663,7 +671,7 @@
   <hr>
 
 
-  <h2 id="山海秘境">山海秘境 </h2>
+  <h2 id="山海秘境" class="nav-heading">山海秘境 </h2>
 
   <p>活动场景：玄玉岛→画中仙<br>地图编号：114</p>
 
@@ -752,7 +760,7 @@
 
   <hr>
 
-  <h2 id="哨兵因因的情报">哨兵因因的情报</h2>
+  <h2 id="哨兵因因的情报" class="nav-heading">哨兵因因的情报</h2>
 
   <p>活动场景：聚灵岛→飞鹰密林<br>地图编号：366</p>
 
@@ -1003,7 +1011,7 @@
 
   <hr>
 
-  <h2 id="境启寻珍">境启寻珍</h2>
+  <h2 id="境启寻珍" class="nav-heading">境启寻珍</h2>
 
   <p>活动场景：聚灵岛→宠物岛<br>地图编号：367</p>
   <p>参与活动可获得活动内道具<i>环游宝箱</i>，可用来兑换系列宠物。</p>
@@ -1099,11 +1107,11 @@
 
   <hr>
 
-  <h2 id="关于">关于</h2>
+  <h2 id="关于" class="nav-heading">关于</h2>
 
   <p>
-    当前版本：0.3.0 | 更新日期：2026-02-22<br>
-    <a src="CHANGELOG.md" target="_blank" rel="nofollow">点击查看更新日志</a>
+    当前版本：0.4.0 | 更新日期：2026-02-25<br>
+    <a href="https://github.com/lltz113/RocoChecklist/blob/main/CHANGELOG.md" target="_blank" rel="nofollow">👉 点击查看更新日志</a>
   </p>
   
   <p>本清单主要按常驻活动种类对可获得的万象集宠物进行分类与统计。</p>
@@ -1118,6 +1126,8 @@
   </p>
   
   <script>
+
+  /* 改变并保存清单项勾选状态、计算进度与奖励相关函数 */
 
   // 生成唯一存储键名
   function getStorageKey(group, elementId) {
@@ -1241,6 +1251,83 @@
 
   // 页面加载时初始化
   window.addEventListener('DOMContentLoaded', initializeGroups);
+
+  /* 导航栏相关函数 */
+
+  // 点击导航项高亮函数
+  function setupNavLinks() {
+    const navLinks = document.querySelectorAll('.sidebar li a');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // 移除所有active类
+        navLinks.forEach(l => l.classList.remove('active'));
+        // 为当前项添加active类
+        this.classList.add('active');
+        
+        // 更新URL hash
+        const targetId = this.getAttribute('href').substring(1);
+        history.replaceState(null, null, `#${targetId}`);
+      });
+    });
+  }
+
+  // 滚动监听高亮函数
+  function setupScrollSpy() {
+    const sections = document.querySelectorAll('.nav-heading');
+    const navLinks = document.querySelectorAll('.sidebar li a');
+    
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      
+      // 查找当前视口中的章节
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+          currentSection = section.id;
+        }
+      });
+      
+      // 更新导航项高亮
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  }
+
+  // URL hash同步函数
+  function syncHashWithNav() {
+    const navLinks = document.querySelectorAll('.sidebar li a');
+    const hash = window.location.hash.substring(1);
+    
+    if (hash) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${hash}`) {
+          link.classList.add('active');
+        }
+      });
+    } else if (navLinks.length > 0) {
+
+      navLinks[0].classList.add('active');
+    }
+  }
+
+  // 初始化导航功能
+  function initNavigation() {
+    setupNavLinks();
+    setupScrollSpy();
+    syncHashWithNav();
+    
+    // 监听hash变化
+    window.addEventListener('hashchange', syncHashWithNav);
+  }
+
+  // 页面加载完成后初始化
+  document.addEventListener('DOMContentLoaded', initNavigation);
 
   </script>
 
